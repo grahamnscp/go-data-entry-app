@@ -1,0 +1,21 @@
+{{ define "Show" }}
+  {{ template "Header" }}
+    <h2>Users</h2>
+    <table border="1">
+      <thead>
+      <tr>
+        <td>User ID</td>
+        <td>System ID</td>
+      </tr>
+       </thead>
+       <tbody>
+    {{ range . }}
+      <tr>
+        <td>{{ .UserId }}</td>
+        <td> {{ .SystemId }} </td>
+      </tr>
+    {{ end }}
+       </tbody>
+    </table>
+  {{ template "Footer" }}
+{{ end }}
